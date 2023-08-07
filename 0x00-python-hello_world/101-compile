@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 $PYFILE > $PYFILEc
+PYFILEc=$(python3 $PYFILE)
