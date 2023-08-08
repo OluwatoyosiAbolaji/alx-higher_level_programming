@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for letter in "abcdefghijklmnopqrstuvwxyz":
-    if letter == 'q' or letter == 'e':
+for c in "abcdefghijklmnopqrstuvwxyz":
+    if c == "e" or c == "q":
         continue
-    print(f"{letter}", end='')
+    print("{}".format(c), end="")
