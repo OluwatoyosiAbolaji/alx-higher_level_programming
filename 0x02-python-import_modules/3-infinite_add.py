@@ -7,4 +7,4 @@ if (__name__ == "__main__"):
     if arg_length > 1:
         for arg in range(1, arg_length):
             result = result + int(argv[arg])
-        print("{:d}".format(result))
+    print("{:d}".format(result))
