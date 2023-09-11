@@ -6,3 +6,4 @@ class Square(object):
     Attributes:
         object (object): just object
     """
+    pass
