@@ -6,7 +6,7 @@ class Square:
     """ COntains fields and methods for a class
     Args:
         size (int): size of a square
-        position (tuple): 
+        position (tuple):
         value (int): new size of a square
     """
     def __init__(self, size=0, position=(0, 0)):
