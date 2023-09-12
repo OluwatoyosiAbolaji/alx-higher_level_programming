@@ -10,6 +10,7 @@ class Node:
     """
     def __init__(self, data, next_node=None):
         self.__data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -28,7 +29,7 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value or type(value) != Node:
+        if not value and type(value) != Node:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
@@ -56,7 +57,6 @@ class SinglyLinkedList:
         return liststr
 
     def sorted_insert(self, value):
-        new_node = Node(value)
         if not self.__head or value < self.__head.__data:
             self.__head = Node(value, self.__head)
         temp = self.__head
