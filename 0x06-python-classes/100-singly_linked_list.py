@@ -9,7 +9,10 @@ class Node:
         Value (int): new data to be set on the node
     """
     def __init__(self, data, next_node=None):
-        self.__data = data
+        if not isinstance(data, int):
+            raise TypeError("data must be an integer")
+        else:
+            self.__data = data
         self.next_node = next_node
 
     @property
@@ -63,3 +66,7 @@ class SinglyLinkedList:
         while temp.__next_node is not None and temp.__next_node.__data < value:
             temp = temp.__next_node
         temp.__next_node = Node(value, temp.__next_node)
+try:
+    n4 = Node("4")
+except Exception as e:
+    print(e)
