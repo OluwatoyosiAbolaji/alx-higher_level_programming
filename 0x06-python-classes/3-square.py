@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ This class contains square methods and fields    
+    """ This class contains square methods and fields
     Args:
         size (int): Size of a square
 
