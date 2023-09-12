@@ -3,8 +3,7 @@
 
 
 class Square:
-    """ This class contains square methods and fields
-    
+    """ This class contains square methods and fields    
     Args:
         size (int): Size of a square
 
@@ -16,5 +15,6 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
     def area(self):
         return self.__size ** 2
