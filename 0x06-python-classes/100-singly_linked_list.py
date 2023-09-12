@@ -29,7 +29,7 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if not value and type(value) != Node:
+        if value is not None and type(value) != Node:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
@@ -46,20 +46,20 @@ class SinglyLinkedList:
 
     def __str__(self):
         liststr = ""
-        if not self.__head:
+        if self.__head is None:
             return ""
         temp = self.__head
         while temp:
             liststr = liststr + str(temp.__data)
             temp = temp.__next_node
-            if temp:
+            if temp is not None:
                 liststr = liststr + '\n'
         return liststr
 
     def sorted_insert(self, value):
-        if not self.__head or value < self.__head.__data:
+        if self.__head is None or value < self.__head.__data:
             self.__head = Node(value, self.__head)
         temp = self.__head
-        while temp.__next_node and temp.__next_node.__data < value:
+        while temp.__next_node is not None and temp.__next_node.__data < value:
             temp = temp.__next_node
         temp.__next_node = Node(value, temp.__next_node)
