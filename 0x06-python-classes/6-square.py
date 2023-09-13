@@ -3,6 +3,7 @@
 
 
 def not_tuple(value):
+    """ This function is to check if a value is a tuple of 2 positive integers"""
     if type(value) != tuple:
         return False
     elif len(value) != 2:
