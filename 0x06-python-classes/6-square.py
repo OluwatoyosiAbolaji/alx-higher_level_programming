@@ -63,7 +63,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        if self.position == 0:
+        if self.size == 0:
             print()
             return
         for j in range(self.position[1]):
