@@ -30,12 +30,12 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not self.__not_tuple(value):
+        if not not_tuple(value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
 
-    def __not_tuple(self, value):
+    def not_tuple(value):
         if type(value) != tuple:
             return False
         elif len(value) != 2:
@@ -51,10 +51,10 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        if self.__size == 0:
+        if self.position == 0:
             print()
             return
-        for j in range(self.__position[1]):
+        for j in range(self.position[1]):
             print()
-        for i in range(self.__size):
-            print("{}{}".format(' ' * self.__position[0], "#" * self.__size))
+        for i in range(self.size):
+            print("{}{}".format(' ' * self.position[0], "#" * self.size))
