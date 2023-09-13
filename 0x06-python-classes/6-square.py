@@ -3,7 +3,8 @@
 
 
 def not_tuple(value):
-    """ This function is to check if a value is a tuple of 2 positive integers"""
+    """ This function is annoying asf """
+
     if type(value) != tuple:
         return False
     elif len(value) != 2:
@@ -14,6 +15,7 @@ def not_tuple(value):
         return False
     else:
         return True
+
 class Square:
     """ COntains fields and methods for a class
     Args:
@@ -21,6 +23,7 @@ class Square:
         position (tuple):
         value (int): new size of a square
     """
+
     def __init__(self, size=0, position=(0, 0)):
         if type(size) != int:
             raise TypeError("size must be an integer")
@@ -67,4 +70,3 @@ class Square:
             print()
         for i in range(self.size):
             print("{}{}".format(' ' * self.position[0], "#" * self.size))
-my_square = Square(3, "Position")
