@@ -16,6 +16,7 @@ def not_tuple(value):
     else:
         return True
 
+
 class Square:
     """ COntains fields and methods for a class
     Args:
@@ -57,7 +58,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
 
     def area(self):
         return self.__size ** 2
