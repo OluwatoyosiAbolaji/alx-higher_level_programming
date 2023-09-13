@@ -56,8 +56,8 @@ class SinglyLinkedList:
             return ""
         temp = self.__head
         while temp:
-            liststr = liststr + str(temp.__data)
-            temp = temp.__next_node
+            liststr = liststr + str(temp.data)
+            temp = temp.next_node
             if temp is not None:
                 liststr = liststr + '\n'
         return liststr
@@ -67,5 +67,5 @@ class SinglyLinkedList:
             self.__head = Node(value, self.__head)
         temp = self.__head
         while temp.next_node is not None and temp.next_node.data < value:
-            temp = temp.__next_node
+            temp = temp.next_node
         temp.next_node = Node(value, temp.next_node)
