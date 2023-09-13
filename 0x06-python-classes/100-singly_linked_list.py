@@ -13,7 +13,10 @@ class Node:
             raise TypeError("data must be an integer")
         else:
             self.__data = data
-        self.next_node = next_node
+        if value is not None and not isinstance(value, Node):
+            raise TypeError("next_node must be a Node object")
+        else:
+            self.__next_node = next_node
 
     @property
     def data(self):
@@ -66,7 +69,3 @@ class SinglyLinkedList:
         while temp.__next_node is not None and temp.__next_node.__data < value:
             temp = temp.__next_node
         temp.__next_node = Node(value, temp.__next_node)
-try:
-    n4 = Node("4")
-except Exception as e:
-    print(e)
