@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+""" This method contains the MagicClass method """
+import math
+
+
+class MagicClass:
+    """ This class contains fields and methods for a circle
+
+    Args:
+        radius (int): radius of the circle
+    """
+    def __init__(self, radius=0):
+        if type(radius) is not int or type(radius) is not float:
+            raise TypeError('radius must be a number')
+        else:
+            self.__radius = radius
+
+    def area(self):
+        return (self.__radius ** 2) * math.pi
+
+    def circumference(self):
+        return 2 * math.pi * self.__radius
