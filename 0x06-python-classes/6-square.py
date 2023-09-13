@@ -2,6 +2,17 @@
 """ This method contains the class Square """
 
 
+def not_tuple(value):
+    if type(value) != tuple:
+        return False
+    elif len(value) != 2:
+        return False
+    elif type(value[0]) != int or value[0] < 0:
+        return False
+    elif type(value[1]) != int or value[1] < 0:
+        return False
+    else:
+        return True
 class Square:
     """ COntains fields and methods for a class
     Args:
@@ -16,7 +27,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-        if not not_tuple(value):
+        if not not_tuple(position):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
@@ -43,17 +54,6 @@ class Square:
         else:
             self.__position = value
 
-    def not_tuple(value):
-        if type(value) != tuple:
-            return False
-        elif len(value) != 2:
-            return False
-        elif type(value[0]) != int or value[0] < 0:
-            return False
-        elif type(value[1]) != int or value[1] < 0:
-            return False
-        else:
-            return True
 
     def area(self):
         return self.__size ** 2
@@ -66,3 +66,4 @@ class Square:
             print()
         for i in range(self.size):
             print("{}{}".format(' ' * self.position[0], "#" * self.size))
+my_square = Square(3, "Position")
