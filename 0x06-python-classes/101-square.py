@@ -16,12 +16,12 @@ def not_tuple(position):
 
 class Square:
     """ This class defines a Square
-    
+
     Args:
         size (int): size/length of a square
         value (int): new size/length of a square
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -32,7 +32,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
-    
+
     @property
     def size(self):
         return self.__size
@@ -75,6 +75,7 @@ class Square:
         for i in range(self.position[1]):
             liststr = liststr + '\n'
         for j in range(self.size - 1):
-            liststr = liststr + (self.position[0] * ' ') + ('#' * self.size) + '\n'
+            liststr = liststr + (self.position[0] * ' ')
+            liststr = liststr + ('#' * self.size) + '\n'
         liststr = liststr + (self.position[0] * ' ') + ('#' * self.size)
         return liststr
