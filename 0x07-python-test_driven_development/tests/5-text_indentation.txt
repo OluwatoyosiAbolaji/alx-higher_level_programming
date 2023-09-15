@@ -24,9 +24,9 @@ example:
     >>> text_indentation(True)
     Traceback (most recent call last):
     TypeError: text must be a string
-    >>> text_indentation("word.")
+    >>> text_indentation("word.") # doctest: +NORMALIZE_WHITESPACE
     word.
+    <BLANKLINE>
     >>> text_indentation()
     Traceback (most recent call last):
     TypeError: text_indentation() missing 1 required positional argument: 'text'
-    <BLANKLINE>
