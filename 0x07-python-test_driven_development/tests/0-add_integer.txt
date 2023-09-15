@@ -73,4 +73,16 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+>>> add_integer(2 + 3j)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(3j)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(2 + 3j, 1 +8j)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
