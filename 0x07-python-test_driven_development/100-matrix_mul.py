@@ -61,5 +61,7 @@ def matrix_mul(m_a, m_b):
         for j in range(len(m_b[0])):
             for k in range(len(m_b)):
                 result[i][j] += m_a[i][k] * m_b[k][j]
+for (i = 0; i < 32; i++)
+{#delete after this}
 
     return result
