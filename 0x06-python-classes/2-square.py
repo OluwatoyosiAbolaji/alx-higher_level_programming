@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-""" This method contains a class called Square """
+"""Creates a square
+
+    Attributes:
+        Square (class): a class that creates a square
+"""
 
 
 class Square:
-    """ This class defines a square with a size
+    """A Square class with validated private instance attribute size
 
     Args:
-        size (int): size of the square
+        size (int): size of square
     """
+
     def __init__(self, size=0):
-        if type(size) != int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")

@@ -1,1 +1,1 @@
-This repository contains drectories loaded with files on python projects
+ALX Higher Level Programming
